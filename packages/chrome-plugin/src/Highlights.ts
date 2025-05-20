@@ -100,6 +100,7 @@ export default class Highlights {
 						pointerEvents: 'none',
 						zIndex: 10,
 						borderBottom: `2px solid ${lintKindColor(box.lint.lint_kind)}`,
+						backgroundColor: `${lintKindColor(box.lint.lint_kind)}22`,
 					},
 				},
 				[],
