@@ -71,7 +71,7 @@ function styleTag() {
 	return h('style', { id: 'harper-suggestion-style' }, [
 		`code {
       background-color: #e3eccf;
-      padding: 0.25rem;
+      padding: 0.125rem;
       border-radius: 0.25rem;
     }
 
@@ -83,7 +83,7 @@ function styleTag() {
       border: 1px solid #d0d7de;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(140, 149, 159, 0.3);
-      padding: 16px;
+      padding: 8px;
       display: flex;
       flex-direction: column;
       z-index: 5000;
@@ -99,8 +99,8 @@ function styleTag() {
       font-size: 14px;
       line-height: 20px;
       color: #1f2328;
-      padding-bottom: 8px;
-      margin-bottom: 8px;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
       user-select: none;
     }
 
@@ -118,7 +118,7 @@ function styleTag() {
       cursor: pointer;
       border: none;
       border-radius: 6px;
-      padding: 6px 12px;
+      padding: 3px 6px;
       min-height: 28px;
       font-size: 13px;
       font-weight: 600;
@@ -145,7 +145,7 @@ function styleTag() {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 4px;
+      padding: 2px;
       gap: 16px;
     }`,
 	]);
