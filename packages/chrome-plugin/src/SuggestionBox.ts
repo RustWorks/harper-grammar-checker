@@ -1,4 +1,5 @@
 import h from 'virtual-dom/h';
+import bookDownSvg from '../assets/book-down.svg?raw';
 import type { IgnorableLintBox, LintBox } from './Box';
 import ProtocolClient from './ProtocolClient';
 import lintKindColor from './lintKindColor';
@@ -46,13 +47,19 @@ function footer(leftChildren: any, rightChildren: any) {
 }
 
 function addToDictionary(box: LintBox): any {
-	return button(
-		'Add to Dictionary',
-		{ background: '#8250DF', color: '#FFFFFF' },
-		() => {
-			ProtocolClient.addToUserDictionary(box.lint.problem_text);
+	console.log(bookDownSvg);
+	return h(
+		'button',
+		{
+			className: 'harper-btn',
+			onclick: () => {
+				ProtocolClient.addToUserDictionary(box.lint.problem_text);
+			},
+			title: 'Add word to user dictionary',
+			'aria-label': 'Add word to user dictionary',
+			innerHTML: bookDownSvg,
 		},
-		'Add word to user dictionary',
+		[],
 	);
 }
 
@@ -154,7 +161,7 @@ function styleTag() {
 function ignoreLint(onIgnore: () => void): any {
 	return button(
 		'Ignore',
-		{ background: '#6e7781', color: '#ffffff' },
+		{ background: '#e5e5e5', color: '#000000', fontWeight: 'lighter' },
 		onIgnore,
 		'Ignore this lint',
 	);
